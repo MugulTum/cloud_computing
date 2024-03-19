@@ -1,0 +1,32 @@
+To run Question 3 (Q3) in PySpark on AWS using Amazon Athena, follow these detailed instructions:
+
+Set Up AWS Environment:
+Make sure you have an AWS account. If not, sign up for one.
+Follow the AWS Setup Guide provided by your instructor to set up your AWS environment, including creating an S3 bucket and uploading the necessary files.
+Set your region to US East (N. Virginia) to avoid data transfer charges.
+Ensure that you have AWS credits available for running the necessary services.
+
+Accessing Data:
+The dataset provided for Q3 should already be uploaded to your S3 bucket. If not, upload the required dataset files (trip_data.csv and lookup_data.csv) to your S3 bucket.
+
+Configure PySpark Environment:
+Use a Docker image provided by your instructor to set up a PySpark environment. Docker allows for easy setup and configuration of the required dependencies.
+Once Docker is installed and running, access Jupyter Notebook by browsing to http://localhost:6242. This should open the Jupyter interface.
+
+Implement Functions:
+Open the provided Jupyter Notebook file (q3.ipynb) in your Jupyter interface.
+Implement the necessary functions (long_trips, manhattan_trips, weighted_profit, final_output) as specified in the assignment. You can write the code directly in the notebook cells.
+
+Load Data:
+Use the provided load_data() function to load the trip data and lookup data into PySpark DataFrames.
+Make sure to replace the file paths in the load_data() function with the appropriate S3 bucket paths where your trip data and lookup data are stored.
+
+Run Main Function:
+Once you have implemented all the necessary functions, run the main() function. This will execute the entire process, including data analysis and writing the final output to a CSV file.
+
+Output CSV File:
+After running the main() function, check the specified S3 bucket for the output CSV file (q3_output_large.csv). This file contains the final output with the required information.
+
+Cleanup:
+Once you have obtained the output file, you can stop the Docker container running PySpark to release system resources.
+If you're done with the AWS resources, remember to delete any unused resources (e.g., EMR clusters, S3 buckets) to avoid unnecessary charges.

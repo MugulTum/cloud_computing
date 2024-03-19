@@ -1,0 +1,43 @@
+To run Q4, you'll need to follow these detailed instructions:
+
+Set up Google Cloud Platform (GCP):
+If you haven't already, sign up for a Google Cloud Platform account.
+Follow the instructions provided by your course or institution to set up GCP credits and create a project.
+
+Set up Google Cloud Storage (GCS):
+Go to the GCP Console (https://console.cloud.google.com/) and navigate to the Storage section.
+Create a new bucket where you'll store your dataset. Note down the bucket name and the path to the dataset.
+
+Set up Google Cloud Dataproc:
+Navigate to the Dataproc section in the GCP Console.
+Create a new Dataproc cluster with the necessary configuration. Ensure that PySpark is included in the cluster.
+Once the cluster is ready, note down the cluster name and its configuration details.
+
+Upload the dataset:
+Upload the provided dataset (yellow_tripdata09-08-2021.csv) to the bucket you created in GCS.
+
+Access Jupyter Notebook:
+Connect to your Dataproc cluster by clicking on the "SSH" button next to the cluster name in the Dataproc section of the GCP Console.
+Once connected, run the command gcloud compute ssh <your-cluster-name-m> to establish an SSH tunnel to the cluster's master node. Replace <your-cluster-name-m> with your actual cluster name.
+Start a Jupyter Notebook server by running the command jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser.
+Open your web browser and navigate to http://<master-node-external-ip>:8080. Replace <master-node-external-ip> with the external IP address of your cluster's master node.
+You should now be able to access Jupyter Notebook.
+
+Open q4.ipynb:
+Once you're in Jupyter Notebook, navigate to the directory where q4.ipynb is located.
+Open q4.ipynb by clicking on it.
+
+Run the notebook:
+Execute each cell in the notebook sequentially by clicking on it and pressing Shift + Enter.
+Ensure that you have replaced placeholder values (such as bucket name and file paths) with your actual values in the notebook.
+When prompted to enter your GCS bucket path in the load_data() function, provide the correct path to the dataset in your GCS bucket.
+
+Review the results:
+After running all cells, review the outputs to ensure that the functions have executed correctly and produced the expected results.
+
+Save the notebook:
+Once you're satisfied with the results, save the notebook.
+
+Terminate the Dataproc cluster:
+Go back to the Dataproc section in the GCP Console.
+Select your cluster and click "Delete" to terminate it. This will help prevent unnecessary charges.

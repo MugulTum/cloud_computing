@@ -1,0 +1,62 @@
+Since Q5 involves using Azure Machine Learning, the implementation would typically be done within the Azure Machine Learning Studio environment, which provides a graphical interface for creating and running experiments. However, I can provide a general outline of the steps involved in creating and running the experiment:
+
+Sign in to Azure Machine Learning Studio: Log in to your Azure Machine Learning Studio account using your credentials.
+
+Create a new experiment: Navigate to the Experiments section and create a new experiment.
+
+Import the dataset: Import the dataset containing automobile data into your experiment. You can upload the dataset from your local machine or connect to a data source where the dataset is stored.
+
+Preprocess the data (if necessary): Perform any necessary data preprocessing steps such as cleaning missing values, encoding categorical variables, and splitting the data into training and testing sets.
+
+Train a regression model: Choose a regression algorithm (e.g., linear regression, decision tree regression, etc.) and train the model using the training data.
+
+Evaluate the model: Evaluate the trained model using the testing data to assess its performance. Calculate metrics such as Root Mean Squared Error (RMSE) and Coefficient of Determination (R^2).
+
+Report the results: Record the values of all metrics obtained from the model evaluation as mentioned in the task instructions.
+
+Repeat the experiment: Repeat the experiment with different configurations as specified in the tasks (e.g., changing the fraction of rows in the first output dataset in the Split Data module).
+
+Perform cross-validation: Set up a cross-validation experiment with 5-fold cross-validation. Train and evaluate the model using cross-validation, and record the RMSE and R^2 values for each fold.
+
+Save and download the experiment results: Save the experiment results and download them in CSV format. Ensure that the CSV file is named q5.csv and contains the required information, including your GT username and the recorded metrics for each task.
+
+Please note that the actual implementation will vary depending on the specific details of your dataset, the chosen regression algorithm, and the features engineered for prediction. Additionally, the steps provided above serve as a general guideline, and you may need to refer to the Azure Machine Learning documentation for detailed instructions on using the platform.
+
+
+Here are detailed instructions on how to complete Q5 using Azure Machine Learning Studio:
+
+
+Task 1: Update q5.csv with your GT username
+Open the file q5.csv using a text editor or spreadsheet application.
+Replace the placeholder gburdell3 with your actual GT username.
+Save the changes to the CSV file.
+
+Task 2: Repeat the experiment described in the tutorial
+Log in to Azure Machine Learning Studio (https://ml.azure.com).
+Create a new experiment or open an existing one where you'll perform the regression analysis.
+Upload the modified dataset file q5.csv into your experiment workspace.
+Drag and drop the Data Import module onto the canvas.
+Connect the Data Import module to your dataset file.
+Follow the tutorial instructions provided by Azure Machine Learning Studio to train a regression model using the dataset.
+Use the provided metrics (e.g., RMSE, R^2) to evaluate the model's performance.
+Record the values of all metrics as mentioned in the task instructions.
+Save the experiment results for future reference.
+
+Task 3: Repeat the experiment with a different fraction of rows
+Modify the Split Data module in your experiment to use a different fraction of rows (e.g., 0.8) instead of the default (0.7).
+Train and evaluate the model with the updated configuration.
+Record the values of the evaluation metrics for this experiment.
+Save the experiment results for future reference.
+
+Task 4: Run a new experiment with 5-fold cross-validation
+Set up a new experiment in Azure Machine Learning Studio.
+Configure the experiment to use 5-fold cross-validation.
+Train and evaluate the regression model using cross-validation.
+Record the RMSE and R^2 values for each fold.
+Save the experiment results for future reference.
+
+Task 5: Save and download the experiment results
+Once you have completed all experiments and recorded the necessary metrics, save the experiment results.
+Download the experiment results in CSV format.
+Ensure that the CSV file is named q5.csv and contains the required information, including your GT username and the recorded metrics for each task.
+By following these detailed instructions, you'll be able to successfully complete Q5 using Azure Machine Learning Studio. If you encounter any difficulties or need further assistance, don't hesitate to refer to the Azure Machine Learning documentation or seek help from the Azure community.

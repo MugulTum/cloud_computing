@@ -1,0 +1,42 @@
+To run Q2, which involves analyzing text data using Spark NLP in PySpark, follow these detailed instructions:
+
+Setup Environment:
+Make sure you have Docker installed on your machine.
+Download the provided Docker image for the assignment, which contains all the necessary dependencies, including Spark and Spark NLP.
+Launch the Docker container using the downloaded image.
+
+Prepare Data:
+Ensure you have the text data you want to analyze. It could be stored locally or in a cloud storage service like Amazon S3.
+If the data is in a cloud storage service, download it to your local machine or mount it to the Docker container.
+
+Launch Jupyter Notebook:
+Access the Jupyter Notebook interface by browsing to http://localhost:6242 in your web browser.
+Upload the provided Jupyter Notebook file (q2.ipynb) to the Jupyter interface.
+
+Open the Notebook:
+Open the uploaded q2.ipynb notebook by clicking on it in the Jupyter interface.
+
+Execute the Code:
+Run each cell in the notebook sequentially. Make sure to read the comments in the code cells for guidance.
+Ensure that you have a Spark session running before executing Spark-related code cells. If not, create one using SparkSession.builder.
+
+Load and Process Data:
+If your data is stored locally, use the appropriate Spark DataFrame API to load it into a DataFrame.
+Follow the provided code snippets to preprocess and clean the text data using Spark NLP annotators.
+Apply sentiment analysis, identify key phrases, and perform other text analysis tasks as instructed in the notebook.
+
+Inspect Results:
+After running the code cells for each task, inspect the results to ensure they match your expectations.
+Verify that sentiment scores, key phrases, word frequencies, and other text analysis outputs are generated correctly.
+
+Save Output:
+Save the final results or processed data to a CSV file or any other preferred format using the appropriate Spark DataFrame API (write.csv, write.parquet, etc.).
+Make sure to specify the correct file path for saving the output file.
+
+Clean Up:
+Once you have completed the analysis and saved the results, shut down the Docker container.
+If necessary, delete any temporary files or directories created during the analysis.
+
+Submit the Output:
+Rename the output file to q2_output.csv or any other specified name if required by the assignment instructions.
+Submit the q2_output.csv file through the designated platform or system for evaluation.

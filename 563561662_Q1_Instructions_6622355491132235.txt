@@ -1,0 +1,60 @@
+Here are detailed instructions on how to run Q1:
+
+Set Up Docker Environment:
+Ensure that Docker is installed on your system. If not, download and install Docker from the official website: Docker
+Once Docker is installed, open the Docker application.
+
+Download the Dataset:
+Download the dataset file yellow_tripdata_2019-01_short.csv provided for Q1. Save it to a location on your local machine.
+
+Download the Assignment Files:
+Download the assignment files provided, including q1.ipynb, the Jupyter Notebook file for Q1.
+
+Start the Docker Container:
+Open a terminal or command prompt window on your system.
+Navigate to the directory where you downloaded the assignment files.
+
+Run the following command to start the Docker container:
+docker run -it --rm -p 6242:8888 -v "$PWD":/home/jovyan jupyter/all-spark-notebook:latest
+This command will pull the Docker image jupyter/all-spark-notebook:latest if it's not already downloaded and start a container with Jupyter Notebook running. It will also map port 6242 on your local machine to port 8888 inside the container, allowing you to access Jupyter Notebook.
+
+docker run -it --rm -p 6242:8888 -v "C:\Users\PC\Desktop\docker123":/home/jovyan jupyter/all-spark-notebook:latest
+docker run -it --rm -p 6242:8888 -v "C:\Users\PC\Desktop\docker123":/home/jovyan jupyter/all-spark-notebook:latest
+
+Access Jupyter Notebook:
+After running the Docker command, you will see output similar to:
+To access the notebook, open this file in a browser:
+    file:///home/jovyan/.local/share/jupyter/runtime/nbserver-1-open.html
+Or copy and paste one of these URLs:
+    http://127.0.0.1:8888/?token=<TOKEN>
+Copy the URL http://127.0.0.1:8888/?token=<TOKEN> and paste it into a web browser.
+This will open the Jupyter Notebook interface in your browser.
+
+Upload Files to Jupyter Notebook:
+In the Jupyter Notebook interface, navigate to the directory where you downloaded the assignment files.
+Click on the "Upload" button and select the files q1.ipynb and yellow_tripdata_2019-01_short.csv from your local machine to upload them to the Jupyter Notebook environment.
+
+Run the Notebook Cells:
+Open the uploaded q1.ipynb notebook by clicking on it.
+
+Read through the instructions and code cells in the notebook.
+To execute a code cell, click on it to select it and then press Shift + Enter on your keyboard.
+Alternatively, you can click the "Run" button in the toolbar at the top of the notebook.
+Follow the instructions provided in the notebook to execute each cell sequentially.
+
+Review Output:
+As you execute each cell, observe the output displayed below the cell.
+Ensure that each cell executes without errors and review the output to verify correctness.
+
+Save and Download Output:
+After executing all cells and verifying the output, save the notebook by clicking "File" > "Save and Checkpoint".
+To download the notebook with the output included, click "File" > "Download as" > "Notebook (.ipynb)".
+
+Stop Docker Container:
+Once you have finished running the notebook and downloaded the output, you can stop the Docker container.
+Return to the terminal or command prompt where the Docker container is running.
+Press Ctrl + C to stop the container.
+Confirm stopping the container if prompted.
+
+
+That's it! You have successfully run Q1 and obtained the output. If you encounter any issues or errors during the process, feel free to ask for assistance.
